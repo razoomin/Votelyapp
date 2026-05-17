@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votely - Dynamic Audience Engagement</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/landing.css">
+
+    <style>
+        #hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #hero::before,
+        #hero::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.25;
+            z-index: 0;
+            animation: floatBlob 8s ease-in-out infinite;
+        }
+
+        #hero::before {
+            width: 320px;
+            height: 320px;
+            background: #7c4dff;
+            top: -80px;
+            left: -80px;
+        }
+
+        #hero::after {
+            width: 260px;
+            height: 260px;
+            background: #ff4081;
+            bottom: -60px;
+            right: -60px;
+            animation-delay: 3s;
+        }
+
+        @keyframes floatBlob {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-25px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            margin: auto;
+            padding: 70px 40px;
+            border-radius: 28px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .hero-title {
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            max-width: 650px;
+            margin: 0 auto 35px auto;
+        }
+
+        .hero-buttons {
+            justify-content: center;
+        }
+
+        .landing-header {
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 50px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body class="landing-body">
+
+    <div class="background-gradient"></div>
+
+    <header class="landing-header">
+        <div class="container-flex">
+            <a href="#" class="logo">Votely</a>
+
+            <nav>
+                <a href="/admin.html" class="button button-secondary">
+                    Login / Sign Up
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="hero" class="text-center">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <h1 class="hero-title">
+                        Feel the Room, in Real-Time.
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        A simple and powerful way to run live polls,
+                        engage your audience instantly,
+                        and display results beautifully in real time.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="/admin.html"
+                           class="button button-accent button-large">
+                            <i class="fa-solid fa-bolt"></i>
+                            Get Started
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
